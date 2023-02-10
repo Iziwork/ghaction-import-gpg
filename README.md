@@ -1,6 +1,6 @@
 [![GitHub release](https://img.shields.io/github/release/crazy-max/ghaction-import-gpg.svg?style=flat-square)](https://github.com/crazy-max/ghaction-import-gpg/releases/latest)
 [![GitHub marketplace](https://img.shields.io/badge/marketplace-import--gpg-blue?logo=github&style=flat-square)](https://github.com/marketplace/actions/import-gpg)
-[![Test workflow](https://img.shields.io/github/workflow/status/crazy-max/ghaction-import-gpg/test?label=test&logo=github&style=flat-square)](https://github.com/crazy-max/ghaction-import-gpg/actions?workflow=test)
+[![Test workflow](https://img.shields.io/github/actions/workflow/status/crazy-max/ghaction-import-gpg/test.yml?branch=master&label=test&logo=github&style=flat-square)](https://github.com/crazy-max/ghaction-import-gpg/actions?workflow=test)
 [![Codecov](https://img.shields.io/codecov/c/github/crazy-max/ghaction-import-gpg?logo=codecov&style=flat-square)](https://codecov.io/gh/crazy-max/ghaction-import-gpg)
 [![Become a sponsor](https://img.shields.io/badge/sponsor-crazy--max-181717.svg?logo=github&style=flat-square)](https://github.com/sponsors/crazy-max)
 [![Paypal Donate](https://img.shields.io/badge/donate-paypal-00457c.svg?logo=paypal&style=flat-square)](https://www.paypal.me/crazyws)
@@ -8,8 +8,6 @@
 ## About
 
 GitHub Action to easily import a GPG key.
-
-If you are interested, [check out](https://git.io/Je09Y) my other :octocat: GitHub Actions!
 
 ![Import GPG](.github/ghaction-import-gpg.png)
 
@@ -75,11 +73,11 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       -
         name: Import GPG key
         id: import_gpg
-        uses: crazy-max/ghaction-import-gpg@v4
+        uses: crazy-max/ghaction-import-gpg@v5
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
@@ -103,10 +101,10 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       -
         name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v4
+        uses: crazy-max/ghaction-import-gpg@v5
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
@@ -138,11 +136,11 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       -
         name: Import GPG key
         id: import_gpg
-        uses: crazy-max/ghaction-import-gpg@v4
+        uses: crazy-max/ghaction-import-gpg@v5
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
